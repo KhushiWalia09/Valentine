@@ -21,8 +21,11 @@
 
 html,
 body {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
-  max-width: 100%;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -190,6 +193,8 @@ body {
   padding: 20px;
   background: white;
   min-height: 100vh;
+  overflow: hidden;
+  /* Prevent horizontal scroll from inner content */
 }
 
 .product-container {
@@ -747,10 +752,11 @@ hr {
   }
 }
 
-@media (max-width: 768px) {
+/* Force mobile styles at 768px and below */
+@media screen and (max-width: 768px) {
   .header-top {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column !important;
+    align-items: stretch !important;
     padding: 10px;
     gap: 10px;
     height: auto;
