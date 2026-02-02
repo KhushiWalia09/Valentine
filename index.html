@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boyfriend — Limited Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="mouse-aura" id="aura"></div>
+
+  <header class="amazon-header">
+    <div class="header-top">
+      <div class="header-left">
+        <a href="#" class="logo">KhushieStore<span class="dot-in">.in</span></a>
+        <div class="deliver-to">
+          <span class="deliver-line-1">Deliver to Khushie</span>
+          <span class="deliver-line-2">Your Heart 00001</span>
+        </div>
+      </div>
+      <div class="header-center">
+        <div class="search-bar">
+          <select class="search-dropdown">
+            <option>All</option>
+            <option>Boyfriends</option>
+            <option>Happiness</option>
+          </select>
+          <input type="text" placeholder="Search KhushieStore.in">
+          <button class="search-btn">🔍</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="nav-item">
+          <span>Hello, Khushie</span>
+          <strong>Account & Lists</strong>
+        </div>
+        <div class="nav-item">
+          <span>Returns</span>
+          <strong>& Orders</strong>
+        </div>
+        <div class="cart-btn">
+          <span class="cart-count">1</span>
+          <strong>Cart</strong>
+        </div>
+      </div>
+    </div>
+    <nav class="sub-nav">
+      <ul>
+        <li><strong>☰ All</strong></li>
+        <li>Fresh</li>
+        <li>Amazon miniTV</li>
+        <li>Sell</li>
+        <li>Best Sellers</li>
+        <li>Today's Deals</li>
+        <li>Mobiles</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="bg-hearts" id="bgHearts"></div>
+
+  <main class="amazon-layout">
+    <div class="product-container">
+      <!-- LEFT COLUMN: IMAGES -->
+      <div class="column-left">
+        <div class="main-image-container">
+          <img src="photo.jpg" alt="Boyfriend Limited Edition" id="mainProdImg">
+        </div>
+        <div class="thumbnails">
+          <img src="photo.jpg" class="active" onclick="changeImage('photo.jpg', this)">
+          <img src="photo2_updated.jpg" onclick="changeImage('photo2_updated.jpg', this)">
+          <img src="photo3.jpg" onclick="changeImage('photo3.jpg', this)">
+          <img src="photo4.jpg" onclick="changeImage('photo4.jpg', this)">
+          <img src="photo5.jpg" onclick="changeImage('photo5.jpg', this)">
+        </div>
+      </div>
+
+      <!-- CENTER COLUMN: DETAILS -->
+      <div class="column-center">
+        <div class="prod-info">
+          <a href="#" class="brand-link">Brand: The One & Only</a>
+          <h1 class="prod-title">Boyfriend — Husband Material (Optimized for Hugs, Gym-Tested, Girlfriend-Approved) ❤️
+          </h1>
+          <div class="ratings-info">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span class="rating-count">1,000,000 ratings</span>
+            <span class="sep">|</span>
+            <span class="answered-q">Search for "The Best Boy"</span>
+          </div>
+          <div class="amazon-badge">Khushie's <span class="choice">Choice</span></div>
+
+          <hr>
+
+          <div class="price-section">
+            <div class="discount-row">
+              <span class="perc-off">-100%</span>
+              <span class="price-symbol">₹</span>
+              <span class="price-whole">0</span>
+            </div>
+            <div class="mrp">M.R.P.: <span>₹99,99,999</span></div>
+            <div class="inclusive">Inclusive of all taxes</div>
+          </div>
+
+          <hr>
+
+          <div class="offers-section">
+            <strong>Offers</strong>
+            <div class="offers-grid">
+              <div class="offer-card">
+                <strong>No Cost EMI</strong>
+                <p>Pay with unlimited love and care.</p>
+              </div>
+              <div class="offer-card">
+                <strong>Bank Offer</strong>
+                <p>Upto 100% Joy on your presence.</p>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="prod-bullets">
+            <h3>About this item</h3>
+            <ul>
+              <li><strong>Premium Quality Support:</strong> Built-in emotional intelligence for 24/7 support.</li>
+              <li><strong>High Durability:</strong> Gym-tested strength for carrying all your shopping bags.</li>
+              <li><strong>Advanced Humor:</strong> Equipped with jokes that make you laugh even when you're mad.</li>
+              <li><strong>Long Battery Life:</strong> Infinite energy for late-night talks and long walks.</li>
+              <li><strong>Girlfriend Approved:</strong> Rigorously tested and verified by Khushie.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: BUY BOX -->
+      <div class="column-right">
+        <div class="buy-box">
+          <div class="price-symbol">₹0.00</div>
+          <div class="delivery-info">
+            FREE Delivery <strong>Tomorrow, Feb 14</strong>. Order within <span class="time-left">2 hrs 45 mins</span>.
+          </div>
+          <div class="stock-status">In Stock.</div>
+          <div class="sold-by">Sold by <strong>Destiny</strong> and Fulfilled by <strong>Universe</strong>.</div>
+
+          <div class="buy-actions">
+            <button id="addToCart" class="amazon-btn yellow">Add to Cart</button>
+            <button id="finalBuy" class="amazon-btn orange">Buy Now</button>
+          </div>
+
+          <div class="secure-transaction">🔒 Secure transaction</div>
+          <div class="add-to-list">Add to Wish List</div>
+        </div>
+
+        <div class="delivery-options-box">
+          <strong>🚚 Delivery Options</strong>
+          <ul>
+            <li>Same-day cuddle delivery</li>
+            <li>Midnight calls included</li>
+            <li>Long-distance mode supported</li>
+            <li>Surprise hugs and kisses on weekends</li>
+            <li>Lots of love even on the busiest days</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section id="specs" class="specs reveal amazon-section">
+      <h3>Product information</h3>
+      <div class="specs-grid">
+        <div class="specs-col">
+          <strong>Technical Details</strong>
+          <table>
+            <tr>
+              <td>Strength</td>
+              <td>Ridiculous 💪</td>
+            </tr>
+            <tr>
+              <td>Looks</td>
+              <td>Illegal 😤</td>
+            </tr>
+            <tr>
+              <td>Humor</td>
+              <td>Elite Level</td>
+            </tr>
+          </table>
+        </div>
+        <div class="specs-col">
+          <strong>Additional Information</strong>
+          <table>
+            <tr>
+              <td>Hug Quality</td>
+              <td>Premium Deluxe</td>
+            </tr>
+            <tr>
+              <td>Warranty</td>
+              <td>Lifetime 💍</td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Taken ❤️</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq reveal amazon-section">
+      <h3>Customer questions & answers</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <strong>Q: Is this returnable?</strong>
+          <p>👉 No. Emotionally attached.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Is this shareable?</strong>
+          <p>👉 Absolutely not.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Does it come with food?</strong>
+          <p>👉 Sometimes steals mine.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Warranty?</strong>
+          <p>👉 Lifetime + jealousy updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews reveal amazon-section">
+      <h3>Customer reviews</h3>
+      <div class="reviews-layout">
+        <div class="reviews-left">
+          <div class="total-rating">5 out of 5</div>
+          <div class="star-bars">
+            <div class="bar-row">
+              <span>5 star</span>
+              <div class="bar">
+                <div class="fill" style="width: 100%"></div>
+              </div>
+              <span>100%</span>
+            </div>
+            <div class="bar-row">
+              <span>4 star</span>
+              <div class="bar">
+                <div class="fill" style="width: 0%"></div>
+              </div>
+              <span>0%</span>
+            </div>
+            <div class="bar-row">
+              <span>3 star</span>
+              <div class="bar">
+                <div class="fill" style="width: 0%"></div>
+              </div>
+              <span>0%</span>
+            </div>
+            <div class="bar-row">
+              <span>2 star</span>
+              <div class="bar">
+                <div class="fill" style="width: 0%"></div>
+              </div>
+              <span>0%</span>
+            </div>
+            <div class="bar-row">
+              <span>1 star</span>
+              <div class="bar">
+                <div class="fill" style="width: 0%"></div>
+              </div>
+              <span>0%</span>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-right">
+          <div class="review-entry">
+            <div class="user-profile">👤 Khushie</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐ Verified Purchase</div>
+            <p class="review-text">Best purchase of my life. Highly recommend for anyone looking for a lifetime of
+              happiness!</p>
+          </div>
+          <div class="review-entry">
+            <div class="user-profile">👤 Universe</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">Stop flexing, she already owned him.</p>
+          </div>
+          <div class="review-entry">
+            <div class="user-profile">👤 Ex-crushes</div>
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">We lost! Out of stock hurts!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="amazon-footer">
+    <div class="back-to-top" id="backToTop">Back to top</div>
+    <div class="footer-links">
+      <div class="link-col">
+        <strong>Get to Know Us</strong>
+        <ul>
+          <li>About Us</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="link-col">
+        <strong>Contact Us</strong>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 KhushieStore.in — Will you be my Valentine? ❤️</p>
+    </div>
+  </footer>
+
+  <!-- POPUP -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-box">
+      <span class="close-x" onclick="closePopup()">&times;</span>
+      <h2>🛒 Order Processing…</h2>
+      <p id="popupText"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- FLOATING MEMORY WIDGET -->
+  <div class="floating-memory-btn" id="unlockMemory" title="Unlock Our Secret">
+    ❤️
+  </div>
+
+  <!-- MEMORY MODAL -->
+  <div id="memoryModal" class="popup hidden">
+    <div class="popup-box memory-modal-box">
+      <span class="close-x" onclick="closeMemoryModal()">&times;</span>
+      <div class="photo-container glass">
+        <img id="memoryPhoto" src="photo.jpg" alt="Our Special Memory">
+      </div>
+      <div class="memory-message">
+        <h2>A Message for You ❤️</h2>
+        <p id="loveMessage">Every moment with you is a gift I never want to stop opening. I remember the day we talked,
+          the day we met...That was the most precious day for me. I love you so much. Thank you for being a amazing
+          hooman in my life, I can never love you enough, but I will try my best to make you happy every single day. I
+          am still amazed by the thought of having you in my life, I still get butterflies, I still get shy, I still
+          smile like an idiot when I think of you. I can't wait to make more memories with you. I love you more than
+          words can say. You are my baby, and always be. I am thankful to the day I texed you, we talked till 5am, with
+          wetty and sleepy eyes, but in that morning sunshine, we promised to be with each other forever and always. I
+          still get nervous when you say that I am your love of your life, I love the feeling of mixed emotions, its
+          sweet, soft, cuddly, and warm. You are the person I can't even breathe without. Stay with me forever, please.
+          So, will you be my Valentine forever and always?
+        </p>
+      </div>
+      <button onclick="closeMemoryModal()">Close with a Kiss 💋</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
