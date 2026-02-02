@@ -705,129 +705,138 @@ hr {
   /* Removed for Amazon look */
 }
 
-/* --- RESPONSIVENESS --- */
-@media (max-width: 1000px) {
+/* --- RESPONSIVENESS (Atomic & Forceful) --- */
+
+@media screen and (max-width: 1000px) {
   .product-container {
-    display: block;
-    padding: 0;
-    width: 100%;
-  }
-
-  .column-left {
-    position: static;
-    flex: none;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .column-center,
-  .column-right {
-    flex: none;
-    width: 100%;
-  }
-
-  .thumbnails {
-    justify-content: center;
-  }
-
-  .main-image-container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .specs-grid,
-  .reviews-layout {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .reviews-left {
-    flex: none;
-    text-align: center;
-  }
-
-  .star-bars {
-    max-width: 300px;
-    margin: 10px auto;
+    display: block !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
 }
 
-/* Force mobile styles at 768px and below */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .header-top {
+    display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    padding: 10px;
-    gap: 10px;
-    height: auto;
+    padding: 10px !important;
+    gap: 12px !important;
+    height: auto !important;
   }
 
   .header-left,
   .header-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: none !important;
   }
 
   .header-center {
-    width: 100%;
-    order: 3;
+    width: 100% !important;
+    order: 3 !important;
+    flex: none !important;
   }
 
   .search-bar {
-    width: 100%;
+    width: 100% !important;
+    height: 45px !important;
+  }
+
+  .search-bar input {
+    width: 100% !important;
   }
 
   .deliver-to {
-    display: none;
+    display: none !important;
   }
 
   .sub-nav {
-    padding: 0 10px;
-    overflow-x: auto;
-    display: block;
-    width: 100%;
-  }
-
-  .sub-nav ul {
-    gap: 10px;
-    display: inline-flex;
-    /* Ensure it stays in one line to scroll */
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .offer-card {
-    min-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .prod-title {
-    font-size: 1.1rem;
-  }
-
-  .price-whole {
-    font-size: 1.4rem;
-  }
-
-  .amazon-btn {
-    padding: 12px;
-    font-size: 0.9rem;
-  }
-
-  .popup-box {
-    padding: 20px;
-    width: 95%;
+    padding: 0 10px !important;
+    width: 100% !important;
   }
 
   .amazon-layout {
-    padding: 10px;
+    padding: 10px !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .column-left,
+  .column-center,
+  .column-right {
+    display: block !important;
+    width: 100% !important;
+    flex: none !important;
+    margin-bottom: 20px !important;
+    position: static !important;
+  }
+
+  .main-image-container {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+
+  .main-image-container img {
+    height: auto !important;
+    max-height: 400px !important;
+    width: 100% !important;
+  }
+
+  .thumbnails {
+    justify-content: center !important;
+  }
+
+  .buy-box {
+    width: 100% !important;
+  }
+
+  .footer-links {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+
+  .link-col {
+    text-align: center !important;
+  }
+
+  .specs-grid,
+  .reviews-layout {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .reviews-left {
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .star-bars {
+    max-width: 300px !important;
+    margin: 10px auto !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prod-title {
+    font-size: 1.1rem !important;
+  }
+
+  .price-whole {
+    font-size: 1.4rem !important;
+  }
+
+  .amazon-btn {
+    padding: 12px !important;
+    font-size: 1rem !important;
+  }
+
+  .popup-box {
+    padding: 20px !important;
+    width: 95% !important;
   }
 }
