@@ -158,7 +158,9 @@ body {
 
 .sub-nav {
   background: var(--amazon-light-navy);
-  padding: 5px 20px;
+  padding: 0 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sub-nav ul {
@@ -166,6 +168,8 @@ body {
   list-style: none;
   gap: 15px;
   font-size: 0.85rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .sub-nav li {
@@ -180,10 +184,12 @@ body {
 
 /* --- PRODUCT LAYOUT --- */
 .amazon-layout {
+  width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
   background: white;
+  min-height: 100vh;
 }
 
 .product-container {
@@ -697,8 +703,9 @@ hr {
 /* --- RESPONSIVENESS --- */
 @media (max-width: 1000px) {
   .product-container {
-    flex-direction: column;
-    padding: 10px;
+    display: block;
+    padding: 0;
+    width: 100%;
   }
 
   .column-left {
@@ -771,9 +778,16 @@ hr {
   }
 
   .sub-nav {
+    padding: 0 10px;
     overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .sub-nav ul {
+    gap: 10px;
+    display: inline-flex;
+    /* Ensure it stays in one line to scroll */
   }
 
   .footer-links {
@@ -790,18 +804,24 @@ hr {
 
 @media (max-width: 480px) {
   .prod-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .price-whole {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .amazon-btn {
     padding: 12px;
+    font-size: 0.9rem;
   }
 
   .popup-box {
     padding: 20px;
+    width: 95%;
+  }
+
+  .amazon-layout {
+    padding: 10px;
   }
 }

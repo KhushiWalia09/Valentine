@@ -150,7 +150,7 @@ function launchAmazonHearts() {
     const heart = document.createElement("div");
     heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
     heart.style.position = "fixed";
-    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.left = Math.random() * 100 + "%";
     heart.style.bottom = "-50px";
     heart.style.fontSize = (Math.random() * 20 + 15) + "px";
     heart.style.transition = (Math.random() * 3 + 2) + "s cubic-bezier(0.4, 0, 0.2, 1)";
